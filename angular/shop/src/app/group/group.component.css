@@ -1,0 +1,30 @@
+#container{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Roboto', sans-serif;
+}
+
+app-details{
+    width: 100%;
+    display: flex;
+    background-color: rgb(247, 247, 247);
+    flex-basis: 31%;
+}
+
+#man, #woman, #child{
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+
+#man:hover{
+    background: rgb(217, 217, 243);
+}
+
+#woman:hover{
+    background: rgb(212, 175, 198);
+}
+
+#child:hover{
+    background: rgb(187, 222, 228);
+}

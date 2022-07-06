@@ -1,0 +1,121 @@
+h2{
+    text-align: center;
+    padding-top: 150px;
+}
+
+form{
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 250px;
+}
+
+form>input{
+    width: 25%;
+}
+
+form>label{
+    margin-top: 35px;
+}
+
+form>textarea{
+    width: 50%;
+    flex-basis: 150px;
+}
+
+#sendForm{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.wrong{
+    border: 1px solid rgb(192, 33, 33);
+}
+
+.well{
+    border: 3px solid rgb(41, 150, 68);
+}
+
+@media(min-width: 170px)
+{
+    h2{
+        padding-top: 50px;
+    }
+
+    form{
+        margin-bottom: 85px;
+        width: 87%;
+    }
+
+    form>textarea{
+        width: 100%;
+    }
+
+    form>label{
+        margin-top: 18px;
+    }
+
+    form>input:nth-of-type(1)
+    {
+        width: 75%;
+    }
+
+    form>input[type='file']
+    {
+        width: 95%;
+    }
+}
+
+@media(min-width: 440px)
+{
+    form>input:nth-of-type(1)
+    {
+        width: 67%;
+    }
+
+    form{
+        width: 80%;
+    }
+}
+
+@media(min-width: 580px)
+{
+    form>input:nth-of-type(1)
+    {
+        width: 56%;
+    }
+
+    form>textarea{
+        width: 82%;
+    }
+}
+
+@media(min-width: 700px)
+{
+    form{
+        width: 65%;
+    }
+
+    form>input[type='file']
+    {
+        width: 68%;
+    }
+}
+
+@media(min-width: 950px)
+{
+    form{
+        width: 55%;
+    }
+}
+
+@media(min-width: 1150px)
+{
+    form{
+        width: 560px;
+    }
+}

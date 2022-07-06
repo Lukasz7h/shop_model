@@ -1,0 +1,16 @@
+h1{
+    height: 40vh;
+    text-align: center;
+    line-height: 65vh;
+    background: linear-gradient(180deg, rgb(44, 115, 148) 0%, rgb(84, 163, 187) 100%);
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 7px;
+    color: aliceblue;
+    font-size: 48px;
+}
+
+section{
+    height: 60vh;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(219, 224, 224);
+}

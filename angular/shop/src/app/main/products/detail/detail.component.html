@@ -1,0 +1,31 @@
+<h3>{{product?.name}}</h3>
+<div id="container">
+    <div class="product__details">
+        <h5>Cena:</h5>
+        <span>{{product?.price}}</span>
+        <h5>Opis:</h5>
+        <p>{{product?.detail?.description}}</p>
+        <div class="product__specyfication" *ngIf="issetSpecification()">
+            <h5>Specyfikacja:</h5>
+            <table>
+                <tr *ngFor="let e of product?.detail?.specification">
+                    <td>{{e.name}}:</td><td>{{e.value}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="product_photos" *ngFor="let image of photos">
+        <img [src]="transformUrl(image)" alt="Zdjęcie produktu">
+    </div>
+    <input min="1" type="number" [(ngModel)]="productCount">
+    <select name="size" [(ngModel)]="productSize">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+    </select>
+    <button (click)="addProductToBasket()">Dodaj do koszyka</button>
+</div>
+
+<app-comments #commentsEl [comments]="comments"></app-comments>
+<app-review *ngIf="canReview"></app-review>

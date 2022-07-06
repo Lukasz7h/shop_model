@@ -1,0 +1,34 @@
+.body{
+    flex-basis: 100%;
+    background-color: rgb(192, 165, 218);
+}
+
+#head{
+    background: url("../../photos/winter-hat.png");
+    background-size: 45px 45px;
+}
+
+#legs{
+    background: url("../../photos/pants.png");
+    background-size: 70px 70px;
+}
+
+#corpus{
+    background: url("../../photos/hoodie.png");
+    background-size: 70px 70px;
+}
+
+#feet{
+    background: url("../../photos/shoe.png");
+    background-size: 45px 45px;
+}
+
+#head, #legs, #corpus, #feet{
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+#head:hover, #legs:hover, #corpus:hover, #feet:hover{
+    box-shadow: 8px 8px 24px -3px rgba(175, 178, 215, 1);
+}

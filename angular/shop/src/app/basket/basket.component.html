@@ -1,0 +1,13 @@
+<h2>Koszyk</h2>
+<div *ngFor="let e of basket">
+    <div>
+        <p>{{e.product.name}}</p>
+        <input #inpCount min="1" type="number" value="{{e.count}}" (input)="changeProductCount(e, inpCount.value)">
+        <p>Ilość: {{e.stuffCount}}</p>
+        <p>Cena za produkt: {{ roundPrice(e.count * e.product.price) }}zł</p>
+        <p>Rozmiar: {{e.size}}</p>
+        <button (click)="deleteFromBasket(e)">Usuń</button>
+    </div>
+</div>
+<h4>Cena za wszystko: {{roundPrice(priceForAll)}}zł</h4>
+<button [disabled]="basketIsEmpty()" routerLink="/zamówienie">Przejdź dalej</button>

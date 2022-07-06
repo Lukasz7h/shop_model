@@ -1,0 +1,56 @@
+div{
+    flex-basis: 32%;
+    height: 450px;
+}
+
+.product{
+    background-color: rgba(243, 243, 243, 0);
+    text-align: center;
+    border: 1px solid #c4b8b8e0;
+    cursor: pointer;
+    padding-top: 35px;
+    margin-bottom: 14px;
+    box-shadow: 8px 8px 4px -5px rgb(183, 183, 187);
+    border-radius: 6px;
+    color: #2e2e2ee0;
+    transition: all 0.8s ease-out;
+}
+
+.product>p{
+    width: 65%;
+    margin: 0px auto;
+}
+
+.first_style{
+    background-color: rgb(101, 211, 178) !important;
+}
+
+.second_style{
+    background-color: rgb(211, 114, 101) !important;
+}
+
+.third_style{
+    background-color: rgb(123, 170, 209) !important;
+}
+
+@media(min-width: 170px)
+{
+    .product{
+        flex-basis: 90%;
+        height: 150px;
+    }
+}
+
+@media(min-width: 500px)
+{
+    .product{
+        flex-basis: 31%;
+    }
+}
+
+@media(min-width: 1200px)
+{
+    .product{
+        height: 250px;
+    }
+}

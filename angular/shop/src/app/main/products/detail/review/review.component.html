@@ -1,0 +1,13 @@
+<form #formComment="ngForm" (ngSubmit)="send(formComment)">
+    <h4>Dodaj komentarz</h4>
+    <div #stars>
+        <fa-icon [icon]="faStar" count-star="1"></fa-icon>
+        <fa-icon [icon]="faStar" count-star="2"></fa-icon>
+        <fa-icon [icon]="faStar" count-star="3"></fa-icon>
+        <fa-icon [icon]="faStar" count-star="4"></fa-icon>
+        <fa-icon [icon]="faStar" count-star="5"></fa-icon>
+    </div>
+    <textarea name="comment" id="" cols="38" rows="13" ngModel></textarea>
+    <br>
+    <button type="submit">Dodaj komentarz</button>
+</form>

@@ -1,0 +1,23 @@
+form>input:first-of-type{
+    margin-bottom: 12px;
+}
+
+ngx-slider{
+    width: 320px;
+    margin-bottom: 34px;
+}
+
+@media(min-width: 170px)
+{
+    ngx-slider{
+        width: 87%;
+        margin-left: 12px;
+    }
+}
+
+@media(min-width: 500px)
+{
+    ngx-slider{
+        width: 320px;
+    }
+}

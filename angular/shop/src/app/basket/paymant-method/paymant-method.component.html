@@ -1,0 +1,11 @@
+<form #formPaymants="ngForm" id="paymants" (ngSubmit)="send(formPaymants)">
+    <input #card type="radio" name="paymant" value="card" ngModel>
+    <label for="">Płatność kartą</label>
+
+    <input #online type="radio" name="paymant" value="online" ngModel>
+    <label for="">Płatność online</label>
+
+    <input #cash type="radio" name="paymant" value="cash" ngModel>
+    <label for="">Płatność gotówką</label>
+    <button type="submit">Zrealizuj zamówienie</button>
+</form>

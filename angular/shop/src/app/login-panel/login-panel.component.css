@@ -1,0 +1,34 @@
+form{
+    border: 2px dotted rgb(144, 211, 169);
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 25px;
+}
+
+form>label{
+    margin: 15px auto 0px auto;
+}
+
+form>h2{
+    font-family: 'Inconsolata', monospace;
+    color: rgb(66, 66, 66);
+}
+
+form>button{
+    width: fit-content;
+    margin: 12px auto 0px auto;
+}
+
+form>input{
+    width: 215px;
+    text-align: center;
+}
+
+form>h2{
+    text-align: center;
+}

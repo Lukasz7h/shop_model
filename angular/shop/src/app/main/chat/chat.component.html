@@ -1,0 +1,12 @@
+<div *ngIf="canWrite" id="chat">
+    <div #messagesContainer id="messagesContainer">
+        <div *ngFor="let e of messages" >
+            <p [ngClass]="e.customer? 'main': 'guest'">{{e.message}}</p> 
+        </div>
+    </div>
+    <div id="write">
+        <input type="text" #chatInp> <button (click)="sendMessage(chatInp.value)">Wyślij</button>
+   </div> 
+</div>
+<div #customers *ngIf="admin" id="customers">  
+</div>

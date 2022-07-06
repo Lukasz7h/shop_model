@@ -1,0 +1,36 @@
+<div id="page_state"></div>
+
+<button #addProductButton style="display: none;" id="add__stuff" routerLink="/dodaj">Dodaj produkt</button>
+<div *ngIf="userLog; else log" id="logout" >
+    <button (click)="logout()">Wyloguj się</button>
+    <button id="basket" routerLink="/koszyk">koszyk</button>
+</div>
+
+<ng-template #log>
+    <button id="register" routerLink="/nowe_konto">Stwórz konto</button>
+    <button id="login" routerLink="/login">Zaloguj się</button>
+</ng-template>
+
+<div id="header">
+    <app-body></app-body>
+    <app-top-list></app-top-list>
+</div>
+
+<div id="container">
+    <app-panel></app-panel>
+    <app-products></app-products>
+</div>
+
+<div id="showChat" #showChat (click)="hasShowChat(showChat)">
+    <div id="can" *ngIf="can else not">
+        <fa-icon [icon]="faCan"></fa-icon>
+    </div>
+    <fa-icon style="color: white; font-size: 22px;" [icon]="faChat"></fa-icon>
+</div>
+<app-chat (emit)="canChat($event)" id="chat" [admin]="isAdmin"></app-chat>
+
+<ng-template #not>
+    <div id="not">
+        x
+    </div>
+</ng-template>

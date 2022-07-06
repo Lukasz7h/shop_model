@@ -1,0 +1,14 @@
+div{
+    display: inline-block;
+    height: 100%;
+    width: 25%;
+    text-align: center;
+    line-height: 60vh;
+    background-color: rgb(85, 163, 187);
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+div:hover{
+    background-color: rgb(129, 196, 216);
+}

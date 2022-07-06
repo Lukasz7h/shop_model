@@ -1,0 +1,14 @@
+<form #accountForm="ngForm" (submit)="validForm(accountForm)">
+    <label>Nazwa:</label>
+    <input name="login" ngModel type="text">
+    <label>Email:</label>
+    <input name="email" ngModel type="text">
+    <label>Numer:</label>
+    <input name="phone" ngModel type="text">
+    <label>Hasło:</label>
+    <input name="password" ngModel type="password">
+    <label>Powtórz hasło:</label>
+    <input name="r_password" ngModel type="password">
+    <button type="submit">Zarejestruj się</button>
+</form>
+<p style="text-align: center;" *ngFor="let e of errors">{{e}}</p>

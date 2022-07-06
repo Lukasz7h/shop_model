@@ -1,0 +1,128 @@
+fa-icon{
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    display: block;
+}
+
+#showComm{
+    position: fixed;
+    right: 25px;
+    top: 10%;
+    background: rgb(175, 213, 118);
+    padding: 8px 10px;
+    border-radius: 14px;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+}
+
+article{
+    width: 0px;
+    height: 100%;
+    overflow: hidden;
+    border: 2px solid rgb(64, 168, 64);
+}
+
+section{
+    height: 500px;
+    width: 420px;
+}
+
+.comment{
+    margin-top: 60px;
+}
+
+.comment fa-icon{
+    display: inline-block;
+}
+
+.ng-fa-icon{
+    color: aliceblue;
+}
+
+.check{
+    color: goldenrod;
+}
+
+.show{
+    width: 420px;
+}
+
+#showComm.active{
+    right: 435px;
+}
+
+@media(min-width: 170px)
+{
+    #showComm{
+        display: none;
+    }
+
+    article{
+        width: 98%;
+        margin-top: 25px;
+        border: none;
+        position: relative;
+        padding-bottom: 77px;
+    }
+
+    section{
+        width: 242px;
+        margin: auto;
+    }
+
+    fa-icon{
+        width: 25px;
+    }
+
+    .comment{
+        margin-top: 22px;
+        line-break: anywhere;
+    }
+
+    .comment>p{
+        width: 96%;  
+    }
+}
+
+@media(min-width: 300px)
+{
+    article{
+        padding-bottom: 0px;
+    }
+}
+
+@media(min-width: 800px)
+{
+    #showComm{
+        display: block;
+        z-index: 5;
+    }
+
+    section{
+        width: 340px;
+        padding-left: 40px;
+    }
+
+    article{
+        padding-top: 35px;
+        margin-top: 0;
+        width: 0px;
+        background-color: rgb(175, 213, 118);
+    }
+
+    article>h2{
+        color: rgb(255, 255, 255);
+    }
+
+    .comment{
+        background: #e9ecee;
+        border-radius: 9px;
+    }
+
+    .comment>p{
+        border-top: 1px dotted black;
+        width: 100%;
+    }
+}

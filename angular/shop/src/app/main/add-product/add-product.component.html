@@ -1,0 +1,38 @@
+<main>
+    <h2>Dodaj nowy produkt</h2>
+    <form  [formGroup]="formProduct" (ngSubmit)="sendForm()">
+        <label for="">Nazwa produktu</label>
+        <input type="text" name="productName" [ngClass]="{'well': isWell('productName')}" (focusout)="checkLength('productName')" formControlName="productName">
+        <label for="">Cena produktu</label>
+        <input type="number" min="1" name="productPrice" formControlName="productPrice">
+        <label for="">Grupa</label>
+        <select formControlName="productGroup">
+            <option *ngFor="let that of group">{{that}}</option>
+        </select>
+        <label for="">Patria ciała</label>
+            <select formControlName="productBodyPart">
+                <option *ngFor="let part of bodyParts">
+                    {{part}}
+                </option>
+            </select>
+        <label for="">Sezon</label>
+        <select formControlName="productSeason">
+            <option *ngFor="let season of seasons">{{season}}</option>
+        </select>
+        <label for="">Opis</label>
+        <textarea name="productDescription" [ngClass]="{'well': isWell('productDescription')}" (focusout)="checkLength('productDescription')" formControlName="productDescription" cols="40" rows="13"></textarea>
+        <label for="">Specyfikacja</label>
+        <div formArrayName="productSpecification" *ngFor="let item of formProduct.get('productSpecification')['controls']; let i=index;">
+            <br>
+            <div [formGroupName]="i">
+                <input placeholder="nazwa" type="text" formControlName="name">
+                <input placeholder="wartość" type="text" formControlName="value">
+                <button type="button" (click)="removeItem(i)">usuń</button>
+            </div>
+        </div>
+        <button style="margin-top: 15px;" type="button" (click)="addItem()">Dodaj</button>
+        <input #inpPhoto formControlName="files" type="file" multiple (input)="addPhotos(inpPhoto)">
+
+        <button id="sendForm" type="submit">Wyślij</button>
+    </form>
+</main>

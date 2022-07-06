@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+app-root, app-main, app-group{
+    display: block;
+}
+
+app-main{
+    min-height: 100vh;
+}
+
+app-group{
+    height: 100vh;
+}
+
+app-detail{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+app-contact, app-statute{
+    display: block;
+}
+
+@media(min-width: 300px)
+{
+    app-detail{
+        height: 90vh;
+    }
+}

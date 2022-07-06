@@ -1,0 +1,184 @@
+:host{
+    --button-top: 40px;
+    --button-height: 25px;
+}
+
+#page_state{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 7px solid rgb(223, 122, 122);
+    z-index: 4;
+}
+
+app-body{
+    display: flex;
+    flex-direction: column;
+    width: 140px;
+    z-index: 3;
+    background: rgb(247, 247, 247);
+}
+
+#container{
+    display: flex;
+    margin-top: 35px;
+}
+
+app-panel{
+    flex-basis: 25%;
+}
+
+app-products{
+    flex-basis: 75%;
+    display: flex;
+    min-height: 450px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+button{
+    height: var(--button-height);
+}
+
+#header{
+    display: flex;
+}
+
+#header, app-body, app-top-list{
+    height: 470px;
+}
+
+app-top-list{
+    width: 100%;
+}
+
+#add__stuff{
+    position: absolute;
+    top: var(--button-top);
+    right: 50px;
+    z-index: 2;
+}
+
+#register{
+    position: absolute;
+    top: var(--button-top);
+    right: 50px;
+    z-index: 2;
+}
+
+#login{
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    z-index: 2;
+}
+
+#logout{
+    position: absolute;
+    top: calc( var(--button-height) + var(--button-top));
+    right: 50px;
+    z-index: 2;
+}
+
+#basket{
+    position: absolute;
+    top: 0;
+    right: 145px;
+    z-index: 2;
+}
+
+app-chat{
+    position: fixed;
+    right: -2%;
+    bottom: 0%;
+    transform: translate(0%, 0%);
+    display: flex;
+    width: 550px;
+    z-index: 3;
+    display: none;
+}
+
+#showChat{
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    background-color: aquamarine;
+    cursor: pointer;
+    width: 45px;
+    height: 35px;
+    text-align: center;
+    z-index: 4;
+    border-radius: 17px;
+    padding-top: 10px;
+}
+
+#can, #not{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    border-radius: 8px;
+    color: aliceblue;
+}
+
+#can{
+    background-color: rgb(115, 221, 112);
+}
+
+#not{
+    font-weight: 600;
+    background-color: rgb(206, 73, 73);
+}
+
+@media(min-width: 170px)
+{ 
+
+    #container{
+        flex-direction: column;
+    }
+
+    #login{
+        top: 70px;
+        right: 20px;
+    }
+
+    #register{
+        top: 35px;
+        right: 20px;
+    }
+
+    #logout, #add__stuff{
+        right: 25px;
+    }
+
+    app-chat{
+        width: 100%;
+        height: 300px;
+    }
+}
+
+@media(min-width: 310px)
+{
+    app-chat{
+        height: 380px;
+    }
+}
+
+@media(min-width: 1200px)
+{
+    #container{
+        flex-direction: row;
+    }
+
+    app-chat{
+        width: 624px;
+        height: 460px;
+    }
+
+    #logout{
+        z-index: 6;
+    }
+}

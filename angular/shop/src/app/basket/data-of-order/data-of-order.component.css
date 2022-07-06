@@ -1,0 +1,21 @@
+h2{
+    margin-bottom: 25px;
+}
+
+#container{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+form>input{
+    margin-bottom: 7px;
+}

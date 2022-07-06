@@ -1,0 +1,12 @@
+<form [formGroup]="sliderForm">
+    <label>Nazwa:</label>
+    <input type="text" formControlName="search">
+    <br>
+    <label>Cena:</label>
+    <br>
+    <ngx-slider formControlName="price" [options]="options"></ngx-slider>
+    <br>
+    Minimalna cena: {{sliderForm.get("price").value[0]}}
+    <br>
+    Maksymalna cena: {{sliderForm.get("price").value[1]}}
+</form>

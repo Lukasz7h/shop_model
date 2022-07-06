@@ -1,0 +1,9 @@
+
+    <div class="product" *ngFor="let product of products;" [routerLink] = "['/sezon', period, group, 'detail', product.id]">
+        {{product?.name}}
+        {{product?.price}}
+        <br>
+        <p *ngIf="product.review"> Ocena: {{reviewFloat(product?.review) }}</p>
+        <br>
+        <p *ngIf="product.reviewAmount"> Ilośc opini: {{product?.reviewAmount}}</p>
+    </div>

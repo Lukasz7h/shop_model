@@ -1,0 +1,18 @@
+<div #list class="list">
+    <fa-icon [icon]="leftArrow" (click)="slideTopList(0, first)"></fa-icon>
+    <div #first class="container">
+        <div class="product" *ngFor="let e of partOfArr(1); let i=index;" [routerLink]="['/sezon', period, group, 'detail', e.id]">
+            <p>{{e.name}} - cena {{e.price}}</p>
+            <p>Ocena: {{e.review}}</p>
+            <p>Ilość opinii: {{e.reviewAmount}}</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="product" *ngFor="let e of partOfArr(2);" [routerLink]="['/sezon', period, group, 'detail', e.id]">
+            <p>{{e.name}} - cena {{e.price}}</p>
+            <p>Ocena: {{e.review}}</p>
+            <p>Ilość opinii: {{e.reviewAmount}}</p>
+        </div>
+    </div>
+    <fa-icon [icon]="rightArrow" (click)="slideTopList(1, first)"></fa-icon>
+</div>

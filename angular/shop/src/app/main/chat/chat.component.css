@@ -1,0 +1,101 @@
+#chat{
+    width: 380px;
+    height: 550px;
+    background-color: rgb(98, 120, 147);
+    display: inline-block;
+    position: relative;
+}
+
+#chat input{
+    height: 24px;
+    width: 80%;
+}
+
+#messagesContainer{
+    height: 90%;
+    width: 100%;
+    background-color: aliceblue;
+}
+
+::ng-deep #messagesContainer>div{
+    margin-top: 7px;
+    position: relative;
+}
+
+::ng-deep #messagesContainer>div>p{
+    padding: 2px 5px;
+}
+
+#customers{
+    width: 150px;
+    height: 550px;
+    background-color: #92c6be;
+    display: inline-block;
+}
+
+#write{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+}
+
+::ng-deep div.customer{
+    width: 55px;
+    height: 55px;
+    background-color: blueviolet;
+    border-radius: 30px;
+}
+
+::ng-deep .main{
+    border-radius: 6px;
+    background-color: #8db5be;
+    position: relative;
+    width: min-content;
+}
+
+::ng-deep .guest{
+    background-color: #ae92c6;
+    width: min-content;
+    border-radius: 6px;
+    left: 0;
+}
+
+::ng-deep .main{
+    background-color: #5c7b97;
+    color: aliceblue;
+    left: 90%;
+}
+
+@media(min-width: 170px)
+{
+    #customers, #chat{
+        height: 300px;
+    }
+
+    #customers{
+        overflow-y: scroll;
+    }
+
+    #write{
+        height: 50px;
+    }
+
+    #messagesContainer{
+        height: 82%;
+        overflow-y: scroll;
+    }
+}
+
+@media(min-width: 310px)
+{
+    #customers, #chat{
+        height: 380px;
+    }
+}
+
+@media(min-width: 1200px){
+    #customers, #chat{
+        height: 460px;
+    }
+}

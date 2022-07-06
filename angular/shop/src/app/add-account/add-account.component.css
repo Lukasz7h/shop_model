@@ -1,0 +1,12 @@
+form{
+    display: flex;
+    flex-direction: column;
+    width: 580px;
+    margin: 300px auto;
+    align-items: center;
+    justify-content: center;
+}
+
+form>input{
+    width: 35%;
+}

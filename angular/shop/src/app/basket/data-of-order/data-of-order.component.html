@@ -1,0 +1,25 @@
+<div id="container">
+    <h2>Wypełnij formularz</h2>
+    <form [formGroup]="dataOfOrderForm" (ngSubmit)="send()">
+        <label for="">*Imię:</label>
+        <input type="text" formControlName="name">
+        <label for="">*Nazwisko:</label>
+        <input type="text" formControlName="surname">
+        <label for="">*Miejscowość:</label>
+        <input type="text" formControlName="city">
+        <label for="">*Kod pocztowy:</label>
+        <input type="text" maxlength="6" name="post_code" formControlName="post_code">
+        <label for="">*Ulica:</label>
+        <input type="text" formControlName="street">
+        <label for="">*Numer domu:</label>
+        <input type="text" formControlName="house_number">
+        <label for="">Numer lokalu:</label>
+        <input type="text" formControlName="apartment_number">
+        <label for="">Telefon:</label>
+        <input type="text" maxlength="9" formControlName="phone">
+        <label for="">E-mail:</label>
+        <input type="text" formControlName="email">
+        <button type="submit">Wyślij</button>
+    </form>
+    <p>Należy podal numer telefonu lub adres E-mail</p>
+</div>
