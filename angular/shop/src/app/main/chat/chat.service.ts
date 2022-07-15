@@ -7,7 +7,7 @@ import * as uuid from "uuid";
 export class ChatService
 {
   socket;
-  users: [{uniq: string, data: [{customer: boolean, message: string}], uuid: string}];
+  users: [{uniq: string, data: [{customer: boolean, message: string}], uuid: string}] | undefined;
 
   canWrite: boolean = false;
 

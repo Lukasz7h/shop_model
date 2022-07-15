@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnDestroy, Output, ViewChild } from '@angular/core';
 import { ChatService } from './chat.service';
 
 import { io } from "socket.io-client";
@@ -11,7 +11,7 @@ import { faUser, IconDefinition } from "@fortawesome/free-solid-svg-icons"
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.css']
 })
-export class ChatComponent implements AfterViewInit
+export class ChatComponent implements AfterViewInit, OnDestroy
 {
 
   canWrite: boolean;
@@ -57,9 +57,12 @@ export class ChatComponent implements AfterViewInit
 
   }
 
+  ngOnDestroy(): void {
+    this.chatService.users = undefined;
+  }
+
   socketOnMessage(data: {uniq?: string, message: string, customer?: boolean, chat: [{customer: boolean, message: string}]}, _customersElement)
   {
-    console.log(data);
     if(data.chat)
     {
       data.customer = !data.customer;
